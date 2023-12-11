@@ -1,0 +1,78 @@
+<ion-content fullscreen class="background">
+  <br>
+  <br>
+
+  <ion-card class="cardcontenido">
+    <div id="container">
+
+      <ion-card-header>
+        <img alt="DUOC UC"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/711px-Logo_DuocUC.svg.png" />
+        <ion-card-title class="ion-text-center texto">Asistencia DUOC - Inicio</ion-card-title>
+      </ion-card-header>
+    </div>
+
+  </ion-card>
+  <br>
+
+
+
+<ion-card class="cardcontenido">
+    <div id="container">
+
+<ion-header >
+
+
+    <ion-segment [(ngModel)]="componente_actual" (ngModelChange)="cambiarComponente($event)">
+
+      <ion-segment-button value="foro">
+        <ion-label>Foro</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="misdatos">
+        <ion-label>Mis datos</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="admin">
+        <ion-label>Admin</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+  
+</ion-header>
+
+</div>
+
+</ion-card>
+
+
+<ion-content>
+
+  <ion-label *ngIf="componente_actual === 'foro'">Contenido del Foro</ion-label>
+  <app-foro *ngIf="componente_actual === 'foro'" [hidden]="componente_actual !== 'foro'"></app-foro>
+
+  <ion-label *ngIf="componente_actual === 'misdatos'">Contenido de Mis Datos</ion-label>
+  <app-misdatos *ngIf="componente_actual === 'misdatos'" [hidden]="componente_actual !== 'misdatos'"></app-misdatos>
+
+  <ion-label *ngIf="componente_actual === 'admin'">Usuarios Registrados</ion-label>
+  <ion-list *ngIf="componente_actual === 'admin'">
+    <ion-item *ngFor="let usuario of listaUsuarios">
+      {{ usuario.nombre }} {{ usuario.apellido }}
+      <ion-button color="danger" slot="end" name="trash" (click)="eliminarUsuario(usuario)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+          <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+        </svg>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="cerrarSesion()" expand="block" fill="clear" shape="round">
+      Cerrar sesión
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
+

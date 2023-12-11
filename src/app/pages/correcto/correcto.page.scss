@@ -1,0 +1,77 @@
+ion-header {
+  margin-bottom: 0;
+}
+
+ion-card {
+  margin-top: 30px;
+  padding: 0;
+  flex-wrap: nowrap;
+  align-content: normal;
+  justify-content: normal;
+  align-items: normal;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+.center-content {
+  text-align: center;
+}
+
+ion-content.background {
+  --background: url(https://www.sabbagharquitectos.com/wp-content/thumbgen_cache/cdae11f5808c9b83a3d6446aa7003d80.jpg) 0 0/100% 100% no-repeat;
+}
+
+ion-input {
+  color: rgb(236, 229, 229);
+  transition: color 0.2s;
+}
+
+ion-input:focus {
+  color: yellow;
+}
+
+.cardcontenido {
+  float: unset !important;
+  background: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: 0% 14%;
+}
+
+.centrado-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.texto {
+  color: rgba(255, 255, 255, 0.822);
+}
+
+.marco {
+  border: 13px solid gray;
+  padding: 16px;
+}
+
+.alinear-centro {
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.enlace {
+  color: rgb(243, 243, 253); // o el color que desees para los enlaces
+  text-decoration: underline;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

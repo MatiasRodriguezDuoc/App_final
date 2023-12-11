@@ -1,0 +1,97 @@
+<ion-content fullscreen class="background">
+
+
+  <ion-card class="cardcontenido">
+
+    <div class="container"> 
+      <ion-card-header >
+      
+      <ion-img alt="DUOC UC" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/711px-Logo_DuocUC.svg.png"/>
+      <ion-card-title class="ion-text-center label">Registro de Usuario</ion-card-title>
+      </ion-card-header>
+
+    </div> 
+  </ion-card>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <ion-card class="cardcontenido">
+
+    <div class="container"> 
+
+    <ion-card-header >
+
+
+    <ion-card-header>
+      <ion-card-title>Mis datos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-header>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre" name="nombre" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input [(ngModel)]="apellido" name="apellido" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input [(ngModel)]="correo" name="correo" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Pregunta secreta</ion-label>
+        <ion-input [(ngModel)]="preguntaSecreta" name="preguntaSecreta" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Respuesta secreta</ion-label>
+        <ion-input [(ngModel)]="respuestaSecreta" name="respuestaSecreta" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="password" name="password" type="text"></ion-input>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label position="floating">Repetir Contraseña</ion-label>
+        <ion-input></ion-input>
+      </ion-item> -->
+
+
+
+      <ion-button color="success" (click)="registrarse()">Registrarse</ion-button>
+      <ion-button expand="full" (click)="volverAlInicio()">Regresar</ion-button>
+    </ion-card-header>
+
+    </ion-card-header>
+
+    </div>
+  </ion-card>
+
+
+
+ 
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <div class="container">
+
+    <h6 class="ion-text-center">Duoc 2023 </h6>
+
+  </div>
+</ion-footer>
